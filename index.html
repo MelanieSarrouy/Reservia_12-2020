@@ -3,121 +3,87 @@
 	<head>
 		<meta charset="UTF-8" />
         <link rel="stylesheet" href="style.css" />
-        <script src="https://kit.fontawesome.com/c97c76d068.js" crossorigin="anonymous"></script><!-- To use Font Awesome -->
+        <!-- To use Font Awesome -->
+        <script src="https://kit.fontawesome.com/c97c76d068.js" crossorigin="anonymous"></script>
 		<title>Reservia</title>
 	</head>
 
 	<body>
         <div id="bloc_page">
             <!-- Header -->
-            <header>
-                <div id="titre_principal">
-                    <!-- Logo -->
-                    <div id="logo">
-                        <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" />
-                    </div>
-
+            <header  id="Hébergements">
+                <div id="bloc1">
+                    <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" id="logo" />                
                     <!-- Menu de navigation -->
                     <nav>
                         <ul>
-                            <li><a href="#Hébergements">Hébergements</a></li>
-                            <li><a href="#Activités">Activités</a></li>
-                            <li><a href="#">S'inscrire</a></li>
+                            <li><a href="#Hébergements" id="hebergement">Hébergements</a></li>
+                            <li><a href="#Activités" id="activites">Activités</a></li>
+                            <li><a href="#" id="sinscrire">S'inscrire</a></li>
                         </ul>
-                    </nav>                    
+                    </nav>
                 </div>
-                <!-- Slogan -->
-                <h1>Trouvez votre hébergement pour des vacances de rêve<br/>
-                <span class="txtnormal">En plein centre ville ou en pleine nature</span></h1>               
+                <h1>Trouvez votre hébergement pour des vacances de rêve<br />
+                    <span class="txtnormal">En plein centre ville ou en pleine nature</span></h1>
             </header>
 
             <!-- Section 1 : Recherche -->
             <section>
                 <!-- Formulaire de recherche -->
-                <form id="recherche">
-                    <div>
-                        <i class="fas fa-map-marker-alt"></i>
+                <form method="GET" action="" id="recherche">
+                    <div id="icon1">
+                        <label for="ville"><i class="fas fa-map-marker-alt"></i></label>
                     </div>
-                    <div>
-                        <input type="text" id="localisation" name="localisation" minlength="3" maxlength="30" size="20" placeholder="Marseille, France" />
+                    <div id="champ">
+                        <input type="search" name="ville" id="ville" minlength="3" maxlength="25" size="25" 
+                        value="Marseille, France" placeholder="Marseille, France" autofocus required />
                     </div>
-                    <div>
-                        <button>Rechercher</button>
+                    <div id="bouton">
+                        <a href="" class="bouton_rechercher">Rechercher</a>
                     </div>
                 </form>
 
-                <!-- Filtres -->
-                <div id="filtres">
-                    <div>
-                        <p>Filtres</p>
-                    </div>
-                    <div class="filter">
-                        <div>
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <div>
-                            <select name="Economique" id="economic-select">
-                                <option value="">Economique</option>
-                                <option value="#"></option>
-                            </select>
-                        </div>                        
-                    </div>
-                    <div class="filter">
-                        <div>
-                            <i class="fas fa-child"></i>
-                        </div>
-                        <div>
-                            <select name="Familial" id="familial-select">
-                                <option value="">Familial</option>
-                                <option value="#"></option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="filter">
-                        <div>
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div>
-                            <select name="love" id="love-select">
-                                <option value="">Romantique</option>
-                                <option value="#"></option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="filter">
-                        <div>
-                            <i class="fas fa-dog"></i>
-                        </div>
-                        <div>
-                            <select name="pet" id="pet-select">
-                                <option value="">Animaux autorisés</option>
-                                <option value="#"></option>
-                            </select>
-                        </div>                   
-                    </div>                
-                </div>
+                <!-- Formulaire de filtres -->                
+                <form method="POST" action="">
+                    <fieldset id="filtres">
+                        <legend>Filtres</legend>                    
+                        <label for="economic"><i class="fas fa-money-bill-wave"></i></label>
+                        <select name="economic" id="economic">
+                            <option value="economic" selected>économique</option>
+                            <option value=""></option>
+                        </select>
+                        <label for="familial"><i class="fas fa-child"></i></label>
+                        <select name="familial" id="familial">
+                            <option value="familial" selected>familial</option>
+                            <option value=""></option>
+                        </select>
+                        <label for="love"><i class="fas fa-heart"></i></label>
+                        <select name="love" id="love">
+                            <option value="love" selected>romantique</option>
+                            <option value=""></option>
+                        </select>
+                        <label for="pets"><i class="fas fa-dog"></i></label>
+                        <select name="pets" id="pets">
+                            <option value="ok" selected>animaux autorisés</option>
+                            <option value=""></option>
+                        </select>
+                    </fieldset>
+                </form>
 
                 <!-- Informations de résultat-->
-                <div id="informations_resultat">
-                    <div>
-                        <i class="fas fa-info"></i>
-                    </div>
-                    <div>
-                        <p>Plus de 500 logements sont disponibles dans cette ville</p>
-                    </div>
-                </div>
+                <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
             </section>
             
             
             <!-- Main : Section 2 + Aside -->
-            <main id="Hébergements">
+            <main>
                 <!-- Section 2 : Hébergements à Marseille -->
                 <section>
                     <h2>Hébergements à Marseille</h2>
                     <!-- Conteneur cartes d'hébergement -->
                     <div id="contener_accomodation_cards">                    
                         <article class="accomodations_cards" id="heb1">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_hebergement">
                                     <img src="assets/img/auberge_la_cannebiere490x236.jpg" alt="Photo Auberge de la Cannebière"/>
                                 </div>
@@ -135,7 +101,7 @@
                             </button>                        
                         </article>
                         <article class="accomodations_cards" id="heb2">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_hebergement">
                                     <img src="assets/img/hotel_du_port490x236.jpg" alt="Photo Hôtel du port"/>
                                 </div>
@@ -153,7 +119,7 @@
                             </button>                        
                         </article>
                         <article class="accomodations_cards" id="heb3">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_hebergement">
                                     <img src="assets/img/hotel_les_mouettes490x236.jpg" alt="Photo Hôtel Les mouettes"/>
                                 </div>
@@ -171,7 +137,7 @@
                             </button>                        
                         </article>
                         <article class="accomodations_cards" id="heb4">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_hebergement">
                                     <img src="assets/img/hotel_de_le_mer490x236.jpg" alt="Photo Hôtel de la mer"/>
                                 </div>
@@ -189,7 +155,7 @@
                             </button>                        
                         </article>
                         <article class="accomodations_cards" id="heb5">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_hebergement">
                                     <img src="assets/img/auberge_le_panier490x236.jpg" alt="Photo Auberge Le Panier"/>
                                 </div>
@@ -207,7 +173,7 @@
                             </button>                        
                         </article>
                         <article class="accomodations_cards" id="heb6">                    
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_hebergement">
                                     <img src="assets/img/hotel_chez_amina490x236.jpg" alt="Photo Hôtel chez Amina"/>
                                 </div>
@@ -230,14 +196,11 @@
 
                 <!-- Aside : Les plus populaires -->
                 <aside>
-                    <div id="aside_title">                
-                        <h2>Les plus populaires</h2>
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                    <h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
                     <!-- Conteneur cartes populaires-->
                     <div id="contener_popular_cards">
                         <article class="most_popular_cards" id="pop1">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_popular">
                                     <img src="assets/img/hotel_le_soleil_du_matin266x286.jpg" alt="Photo Hôtel Le soleil du matin"/>
                                 </div>
@@ -255,7 +218,7 @@
                             </button>
                         </article>
                         <article class="most_popular_cards" id="pop2">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_popular">
                                     <img src="assets/img/au_coeur_de_leau_chambres_dhotes266x286.jpg" alt="Photo Au coeur de l'eau Chambres d'hôtes"/>
                                 </div>
@@ -273,7 +236,7 @@
                             </button>
                         </article>
                         <article class="most_popular_cards" id="pop3">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div class="img_popular">
                                     <img src="assets/img/hotel_tout_bleu_et_blanc266x286.jpg" alt="Photo Hôtel Tout bleu et Blanc"/>
                                 </div>
@@ -300,7 +263,7 @@
                 <!-- Conteneur cartes d'activités -->
                 <div id="contener_activity_cards">
                     <article id="activity1">
-                        <button type="submit" formtarget="_blank">
+                        <button type="button" formtarget="_blank">
                             <div>
                                 <img src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
                             </div>
@@ -311,7 +274,7 @@
                     </article>                         
                     <div class="landscape_cards">
                         <article id="activity2">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div>
                                     <img src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
                                 </div>
@@ -321,7 +284,7 @@
                             </button>
                         </article>                
                         <article id="activity3">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div>
                                     <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
                                 </div>
@@ -332,7 +295,7 @@
                         </article>
                     </div>
                     <article id="activity4">
-                        <button type="submit" formtarget="_blank">
+                        <button type="button" formtarget="_blank">
                             <div>
                                 <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
                             </div>
@@ -343,7 +306,7 @@
                     </article>                
                     <div class="landscape_cards">
                         <article id="activity5">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div>
                                     <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
                                 </div>
@@ -353,7 +316,7 @@
                             </button>
                         </article>
                         <article id="activity6">
-                            <button type="submit" formtarget="_blank">
+                            <button type="button" formtarget="_blank">
                                 <div>
                                     <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
                                 </div>
