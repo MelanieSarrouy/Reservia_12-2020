@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-        <link rel="stylesheet" href="style.css" />
-        <!-- To use Font Awesome -->
+		<!-- Informations pour le navigateur -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+        <!-- Informations pour le SEO -->
+        <title>Reservia</title>
+        <meta name="description" content="Trouver un hébergement pour les vacances" />
+        
+        <!-- Feuiles de styles -->
         <script src="https://kit.fontawesome.com/c97c76d068.js" crossorigin="anonymous"></script>
-		<title>Reservia</title>
+        <link rel="stylesheet" href="assets/CSS/reset.css" />
+        <link rel="stylesheet" href="assets/CSS/style.css" />
 	</head>
 
 	<body>
         <div id="bloc_page">
             <!-- Header -->
-            <header  id="Hébergements">
+            <header id="Hébergements">
                 <div id="bloc1">
                     <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" id="logo" />                
                     <!-- Menu de navigation -->
@@ -23,13 +30,13 @@
                         </ul>
                     </nav>
                 </div>
-                <h1>Trouvez votre hébergement pour des vacances de rêve<br />
-                    <span class="txtnormal">En plein centre ville ou en pleine nature</span></h1>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <h2>En plein centre ville ou en pleine nature</h2>
             </header>
 
             <!-- Section 1 : Recherche -->
             <section>
-                <!-- Formulaire de recherche -->
+                <!-- Formulaire de recherche </form>-->
                 <form method="GET" action="" id="recherche">
                     <div id="icon1">
                         <label for="ville"><i class="fas fa-map-marker-alt"></i></label>
@@ -39,36 +46,34 @@
                         value="Marseille, France" placeholder="Marseille, France" autofocus required />
                     </div>
                     <div id="bouton">
-                        <a href="" class="bouton_rechercher">Rechercher</a>
+                        <input type="submit" name="bouton-rechercher" id="bouton-rechercher" value="Rechercher" />
                     </div>
-                </form>
+                </form>                
 
                 <!-- Formulaire de filtres -->                
-                <form method="POST" action="">
-                    <fieldset id="filtres">
-                        <legend>Filtres</legend>                    
+                <div id="ligne_filtres">
+                    <h2>Filtres</h2>                    
+                    <div class="filters">
                         <label for="economic"><i class="fas fa-money-bill-wave"></i></label>
-                        <select name="economic" id="economic">
-                            <option value="economic" selected>économique</option>
-                            <option value=""></option>
-                        </select>
+                        <input id="economic" name="economic" type="button" />
+                        <span class="info">Économique</span>
+                    </div>
+                    <div class="filters">
                         <label for="familial"><i class="fas fa-child"></i></label>
-                        <select name="familial" id="familial">
-                            <option value="familial" selected>familial</option>
-                            <option value=""></option>
-                        </select>
+                        <input id="familial" name="familial" type="button" />
+                        <span class="info">Familial</span>
+                    </div>
+                    <div class="filters">
                         <label for="love"><i class="fas fa-heart"></i></label>
-                        <select name="love" id="love">
-                            <option value="love" selected>romantique</option>
-                            <option value=""></option>
-                        </select>
+                        <input id="love" name="love" type="button" />
+                        <span class="info">Romantique</span>
+                    </div>
+                    <div class="filters">
                         <label for="pets"><i class="fas fa-dog"></i></label>
-                        <select name="pets" id="pets">
-                            <option value="ok" selected>animaux autorisés</option>
-                            <option value=""></option>
-                        </select>
-                    </fieldset>
-                </form>
+                        <input id="pets" name="pets" type="button" />
+                        <span class="info">Animaux autorisés</span>
+                    </div>                    
+                </div>                
 
                 <!-- Informations de résultat-->
                 <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
