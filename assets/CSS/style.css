@@ -1,5 +1,6 @@
 /* Polices personnalisées */
-@font-face {
+@font-face 
+{
     font-family: 'ralewaythin';
     src: url('assets/fonts/raleway-variablefont_wght-webfont.eot');
     src: url('assets/fonts/raleway-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
@@ -21,31 +22,77 @@ body
 {
     margin: auto;
 }
+img
+{
+    max-width: 100%;
+}
+.bold
+{
+    font-weight: bold;
+}
+.blue
+{
+    color: #0065fc;
+}
+.black
+{
+    color: black;
+}
+.grey
+{
+    color: #f2f2f2;
+}
+h1
+{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+h2
+{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+h3
+{
+    font-size: 1rem;
+    font-weight: bold;
+}
+p
+{
+    font-size: 1rem;
+    font-weight: normal;
+}
+h1, h2, h3, p
+{
+    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
 /* Header */
+
 #bloc1
 {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
-    height: 7.5rem;
-    padding-top: 0.3rem;
 }
 /* logo */
 #logo
 {
     width: 6.5rem;
-    align-self: center;
+    min-width: 5rem;
     padding-left: 0.5rem;
 }
  /* menu */
 nav ul
 {
     display: flex;
-    list-style-type: none;
+    
 }
 nav li
 {
-    padding: 3.6rem 2rem;    
+    padding: 3.2rem 2.5rem;  
 }
 a
 {
@@ -53,7 +100,7 @@ a
 }
 #sinscrire
 {
-    font-weight: 900;
+    font-weight: bold;
     color: #0065fc;
 }
 /* menu dynamique */
@@ -61,7 +108,7 @@ nav a:active
 {
     color: #0065fc;
     font-weight: normal;
-    padding-top: 3.2rem;
+    padding-top: 3rem;
     border-top: 0.2rem solid #0065fc;
 }
 a:visited
@@ -72,64 +119,51 @@ nav li:hover
 {
     color: #0065fc;
     font-weight: normal;
-    padding-top: 3.4rem;
+    padding-top: 3rem;
     border-top: 0.2rem solid #0065fc;
 }
 /* Titre principal */
-h1
+
+h1 + p
 {
-    font-size: 1.4rem;
-    font-weight: bold;
     margin-left: 0.5rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;   
 }
-h1 + h2
+
+/* Section 1 : Recherche*/
+#section1
 {
-    font-size: 1rem;
-    margin-left: 0.5rem;   
-}
-/* Couleur des icones */
-i
-{
-    color: #0065fc;
-}
-#aside_title i
-{
-    color: black;
+    padding-left: 0.5rem;
 }
 /* Formulaire de recherche */
 #recherche
 {
     display: flex;
-    padding-left: 0.5rem;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
-
 #icon1
 {
     background-color: #f2f2f2;
     width: 3rem;
-    height: 3rem;
-    border-radius: 1rem 0 0 1rem;
-    border-left:  #f2f2f2 0.1rem solid;
-    border-top:  #f2f2f2 0.1rem solid;
-    border-bottom:  #f2f2f2 0.1rem solid;
+    min-width: 3rem;
+    height: 2.8rem;
+    box-sizing: border-box;
+    border-radius: 1rem 0 0 1rem;    
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 #icon1 i
 {
-    color: black;
     font-size: 1.2rem;
 }
 #champ 
 {
-   font-size: 1.1rem;
+   font-size: 1rem;
    font-weight: normal;
    width: 15rem;
-   height: 3rem;
+   height: 2.8rem;
+   box-sizing: border-box;
    border-top: #f2f2f2 0.1rem solid;
    border-bottom: #f2f2f2 0.1rem solid;
    display: flex;
@@ -137,90 +171,254 @@ i
 }
 #ville
 {
-    border: none;
-    box-sizing: border-box;
+    border-style: none;
     padding-left: 1rem;
     font-size: 1rem;
-    font-weight: bold;
     font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
-#bouton
+/* apparence champ de recherche sur navigateurs */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration 
 {
-    background-color: #0065fc; 
-    border-radius: 0 1rem 1rem 0;
-    border-top: #0065fc 0.1rem solid;
-    border-right: #0065fc 0.1rem solid;
-    border-bottom: #0065fc 0.1rem solid;
-    width: 8rem; 
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
+}
+input[type="search"]
+{
+/*  -webkit-appearance: none;
+    -webkit-box-sizing: content-box; */
+    outline: none;
 }
 #bouton-rechercher
 {
+    height: 2.8rem;
+    padding: 0 1.2rem;
+    border-radius: 0 1rem 1rem 0;
     border: none;
     background-color: #0065fc; 
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;    
+    cursor: pointer;
 }
 
 /* Filtres */
 
-#ligne_filtres
+#bloc_filters
 {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 0.5rem;
     margin-bottom: 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        
 }
-#ligne_filtres input
+#bloc_filters input
 {
     position: absolute;
     left: -9999px;
 }
 .filters
 {
-    margin-left: 3rem;
+    margin-left: 2rem;
     display: flex;
     align-items: center;
     border-top: solid #d9d9d9 0.15rem;
     border-right: solid #d9d9d9 0.15rem;
     border-bottom: solid #d9d9d9 0.15rem;
     border-radius: 1.6rem;
-    height: 3rem;
+    height: 2.8rem;
+    box-sizing: border-box;
     cursor: pointer;
     background-color: white;
 }
-#ligne_filtres i
+#bloc_filters i
 {
     background-color: #deebff;
-    width: 3rem;
-    height: 3rem;
-    border: #deebff solid 0.15rem;
-    border-radius: 1.6rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    box-sizing: border-box;
     font-size: 1.2rem;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .info
 {
-    padding: 0 1rem;
+    padding: 0 1.2rem 0 0.8rem;
+    font-weight: bold;  
+}
+/* Informations quantités logements */
+#informations
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.icone-info
+{
+    width: 1.6rem;
+    height: 1.6rem;
+    border: #f2f2f2 solid 0.15rem;
+    border-radius: 50%;
+    display: flex;
+    box-sizing: border-box;
+}
+.icone-info i
+{
+    font-size: 0.8rem;
+    margin: auto;
+}
+#informations p
+{
+    padding-left: 0.8rem;
+}
+/* Bloc principal : main + aside */
+
+/* Grilles*/
+#bloc_principal
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+}
+#container_accomodation_cards
+{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 2rem 0;    
+}
+
+#section2, aside
+{
+    padding: 2.5rem;
+    background-color: #f2f2f2;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+}
+#section2 a, #section2 a:active, #section2 a:visited
+{
     font-size: 1rem;
     font-weight: bold;
-    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;    
+    color: black;
 }
+button[type="button"]
+{
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    border: solid 0.4rem white;
+    border-radius: 1.5rem;
+    padding: 0;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+.img_hebergement img
+{
+    min-width: 235px;
+    min-height: 112px;
+}
+.txt_hebergement
+{
+    line-height: 1.5rem;
+    text-align: left;
+    padding: 0 1rem;
+    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+
+}
+.txt_hebergement h3
+{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+.txt_hebergement span
+{
+    font-weight: bold;
+}
+
+
+aside h2
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+aside h2 i
+{
+    color: black;
+}
+#container_popular_cards
+{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 2rem;
+    padding: 1.5rem 0;
+}
+.img_popular img
+{
+    min-width: 126px;
+    min-height: 133px;
+}
+.most_popular_cards button
+{
+    display: grid;
+    grid-template-columns: 2fr 3fr auto;
+}
+.txt_popular
+{
+    line-height: 1.2rem;
+    text-align: left;
+    padding: 0 1rem;
+    font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.txt_popular h3
+{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.txt_popular p
+{
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+}
+.bold
+{
+    font-weight: bold;
+}
+.stars
+{
+    padding-bottom: 0.5rem;
+}
+
+/* Section 3 */
+
+#section3
+{
+    margin-top: 3rem;
+}
+#container_activity_cards
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+.activity_cards
+{
+    border-style: none;
+}
+
 
 
 

@@ -18,321 +18,311 @@
 	<body>
         <div id="bloc_page">
             <!-- Header -->
-            <header id="Hébergements">
+            <header>
                 <div id="bloc1">
-                    <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" id="logo" />                
+                    <figure>
+                        <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" id="logo" />
+                    </figure>                
                     <!-- Menu de navigation -->
                     <nav>
                         <ul>
                             <li><a href="#Hébergements" id="hebergement">Hébergements</a></li>
                             <li><a href="#Activités" id="activites">Activités</a></li>
-                            <li><a href="#" id="sinscrire">S'inscrire</a></li>
+                            <li><a href="#" class="bold" id="sinscrire">S'inscrire</a></li>
                         </ul>
                     </nav>
                 </div>
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <h2>En plein centre ville ou en pleine nature</h2>
-            </header>
+                <p>En plein centre ville ou en pleine nature</p>
 
-            <!-- Section 1 : Recherche -->
-            <section>
-                <!-- Formulaire de recherche </form>-->
-                <form method="GET" action="" id="recherche">
-                    <div id="icon1">
-                        <label for="ville"><i class="fas fa-map-marker-alt"></i></label>
-                    </div>
-                    <div id="champ">
-                        <input type="search" name="ville" id="ville" minlength="3" maxlength="25" size="25" 
-                        value="Marseille, France" placeholder="Marseille, France" autofocus required />
-                    </div>
-                    <div id="bouton">
-                        <input type="submit" name="bouton-rechercher" id="bouton-rechercher" value="Rechercher" />
-                    </div>
-                </form>                
+                <!-- Section 1 : Recherche -->
+                <section id="section1">
+                    <!-- Formulaire de recherche -->
+                    <form method="GET" action="" id="recherche">
+                        <div id="icon1">
+                            <label for="ville"><i class="fas fa-map-marker-alt bold black"></i></label>
+                        </div>
+                        <div id="champ">
+                            <input type="search" name="ville" id="ville" class="bold" minlength="3" maxlength="25" size="25" 
+                            value="Marseille, France" placeholder="Marseille, France" autofocus required />
+                        </div>
+                        <div id="bouton">
+                            <input type="submit" name="bouton-rechercher" id="bouton-rechercher" class="bold" value="Rechercher" />
+                        </div>
+                    </form>                
 
-                <!-- Formulaire de filtres -->                
-                <div id="ligne_filtres">
-                    <h2>Filtres</h2>                    
-                    <div class="filters">
-                        <label for="economic"><i class="fas fa-money-bill-wave"></i></label>
-                        <input id="economic" name="economic" type="button" />
-                        <span class="info">Économique</span>
-                    </div>
-                    <div class="filters">
-                        <label for="familial"><i class="fas fa-child"></i></label>
-                        <input id="familial" name="familial" type="button" />
-                        <span class="info">Familial</span>
-                    </div>
-                    <div class="filters">
-                        <label for="love"><i class="fas fa-heart"></i></label>
-                        <input id="love" name="love" type="button" />
-                        <span class="info">Romantique</span>
-                    </div>
-                    <div class="filters">
-                        <label for="pets"><i class="fas fa-dog"></i></label>
-                        <input id="pets" name="pets" type="button" />
-                        <span class="info">Animaux autorisés</span>
-                    </div>                    
-                </div>                
+                    <!-- Formulaire de filtres -->                
+                    <div id="bloc_filters">
+                        <p class="bold">Filtres</p>                    
+                        <div class="filters">
+                            <label for="economic"><i class="fas fa-money-bill-wave bold blue"></i></label>
+                            <input id="economic" name="economic" type="button" />
+                            <span class="info">Économique</span>
+                        </div>
+                        <div class="filters">
+                            <label for="familial"><i class="fas fa-child bold blue"></i></label>
+                            <input id="familial" name="familial" type="button" />
+                            <span class="info">Familial</span>
+                        </div>
+                        <div class="filters">
+                            <label for="love"><i class="fas fa-heart bold blue"></i></label>
+                            <input id="love" name="love" type="button" />
+                            <span class="info">Romantique</span>
+                        </div>
+                        <div class="filters">
+                            <label for="pets"><i class="fas fa-dog blod blue"></i></label>
+                            <input id="pets" name="pets" type="button" />
+                            <span class="info">Animaux autorisés</span>
+                        </div>                    
+                    </div>                
 
-                <!-- Informations de résultat-->
-                <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
-            </section>
+                    <!-- Informations de résultat-->
+                    <div id="informations">
+                        <span class="icone-info"><i class="fas fa-info blue"></i></span>
+                        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    </div>                
+                </section>            
+            </header>            
             
-            
-            <!-- Main : Section 2 + Aside -->
-            <main>
-                <!-- Section 2 : Hébergements à Marseille -->
-                <section>
+            <div id="bloc_principal">
+                <!-- Main : Section 2 : Hébergements à Marseille-->
+                <main id="section2">                    
                     <h2>Hébergements à Marseille</h2>
                     <!-- Conteneur cartes d'hébergement -->
-                    <div id="contener_accomodation_cards">                    
-                        <article class="accomodations_cards" id="heb1">
+                    <div id="container_accomodation_cards">                    
+                        <article class="accomodations_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_hebergement">
-                                    <img src="assets/img/auberge_la_cannebiere490x236.jpg" alt="Photo Auberge de la Cannebière"/>
-                                </div>
+                                <figure class="img_hebergement">
+                                    <img src="assets/img/auberge_la_cannebiere490x236.jpg" alt="Photo Auberge de la Cannebière">
+                                </figure>
                                 <div class="txt_hebergement">
                                     <h3>Auberge de la Cannebière</h3>
                                     <p>Nuit à partir de <span class="bold">25€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star grey"></i>
+                                    </p>
                                 </div>
                             </button>                        
-                        </article>
-                        <article class="accomodations_cards" id="heb2">
+                        </article>                        
+                        <article class="accomodations_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_hebergement">
+                                <figure class="img_hebergement">
                                     <img src="assets/img/hotel_du_port490x236.jpg" alt="Photo Hôtel du port"/>
-                                </div>
+                                </figure>
                                 <div class="txt_hebergement">
                                     <h3>Hôtel du port</h3>
                                     <p>Nuit à partir de <span class="bold">52€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                    </p>
                                 </div>
                             </button>                        
                         </article>
-                        <article class="accomodations_cards" id="heb3">
+                        <article class="accomodations_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_hebergement">
+                                <figure class="img_hebergement">
                                     <img src="assets/img/hotel_les_mouettes490x236.jpg" alt="Photo Hôtel Les mouettes"/>
-                                </div>
+                                </figure>
                                 <div class="txt_hebergement">
                                     <h3>Hôtel Les mouettes</h3>
                                     <p>Nuit à partir de <span class="bold">76€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star grey"></i>
+                                    </p>
                                 </div>
                             </button>                        
                         </article>
-                        <article class="accomodations_cards" id="heb4">
+                        <article class="accomodations_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_hebergement">
+                                <figure class="img_hebergement">
                                     <img src="assets/img/hotel_de_le_mer490x236.jpg" alt="Photo Hôtel de la mer"/>
-                                </div>
+                                </figure>
                                 <div class="txt_hebergement">
                                     <h3>Hôtel de la mer</h3>
                                     <p>Nuit à partir de <span class="bold">46€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star grey"></i>
+                                        <i class="fas fa-star grey"></i>
+                                    </p>
                                 </div>
                             </button>                        
                         </article>
-                        <article class="accomodations_cards" id="heb5">
+                        <article class="accomodations_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_hebergement">
+                                <figure class="img_hebergement">
                                     <img src="assets/img/auberge_le_panier490x236.jpg" alt="Photo Auberge Le Panier"/>
-                                </div>
+                                </figure>
                                 <div class="txt_hebergement">
                                     <h3>Auberge Le Panier</h3>
                                     <p>Nuit à partir de <span class="bold">23€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star grey"></i>
+                                    </p>
                                 </div>
                             </button>                        
                         </article>
-                        <article class="accomodations_cards" id="heb6">                    
+                        <article class="accomodations_cards">                    
                             <button type="button" formtarget="_blank">
-                                <div class="img_hebergement">
+                                <figure class="img_hebergement">
                                     <img src="assets/img/hotel_chez_amina490x236.jpg" alt="Photo Hôtel chez Amina"/>
-                                </div>
+                                </figure>
                                 <div class="txt_hebergement">
                                     <h3>Hôtel chez Amina</h3>
                                     <p>Nuit à partir de <span class="bold">96€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                    </pv>
                                 </div>
                             </button>
                         </article>
                     </div>
-                    <a href="#">Afficher plus</a>
-                </section>
+                    <p><a href="#">Afficher plus</a></p>
+                </main>
 
                 <!-- Aside : Les plus populaires -->
-                <aside>
-                    <h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
+                <aside id="aside">
+                    <h2>Les plus populaires<i class="fas fa-chart-line black"></i></h2>
                     <!-- Conteneur cartes populaires-->
-                    <div id="contener_popular_cards">
-                        <article class="most_popular_cards" id="pop1">
+                    <div id="container_popular_cards">
+                        <article class="most_popular_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_popular">
+                                <figure class="img_popular">
                                     <img src="assets/img/hotel_le_soleil_du_matin266x286.jpg" alt="Photo Hôtel Le soleil du matin"/>
-                                </div>
+                                </figure>
                                 <div class="txt_popular">
                                     <h3>Hôtel Le soleil du matin</h3>
                                     <p>Nuit à partir de <span class="bold">128€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                    </p>
                                 </div>
                             </button>
                         </article>
-                        <article class="most_popular_cards" id="pop2">
+                        <article class="most_popular_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_popular">
+                                <figure class="img_popular">
                                     <img src="assets/img/au_coeur_de_leau_chambres_dhotes266x286.jpg" alt="Photo Au coeur de l'eau Chambres d'hôtes"/>
-                                </div>
+                                </figure>
                                 <div class="txt_popular">
                                     <h3>Au coeur de l'eau Chambres d'hôtes</h3>
                                     <p>Nuit à partir de <span class="bold">71€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star grey"></i>
+                                    </p>
                                 </div>
                             </button>
                         </article>
-                        <article class="most_popular_cards" id="pop3">
+                        <article class="most_popular_cards">
                             <button type="button" formtarget="_blank">
-                                <div class="img_popular">
+                                <figure class="img_popular">
                                     <img src="assets/img/hotel_tout_bleu_et_blanc266x286.jpg" alt="Photo Hôtel Tout bleu et Blanc"/>
-                                </div>
+                                </figure>
                                 <div class="txt_popular">
                                     <h3>Hôtel Tout bleu et Blanc</h3>
                                     <p>Nuit à partir de <span class="bold">68€</span></p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
+                                    <p class="stars block-inline">
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star blue"></i>
+                                        <i class="fas fa-star grey"></i>
+                                    </p>
                                 </div>
                             </button>
                         </article>
                     </div>
                 </aside>
-            </main>
+            </div>
 
             <!-- Section 3 : Activités -->
-            <section id="Activités">
-                <h2>Activités</h2>
+            <section id="section3">
+                <h2>Activités à Marseille</h2>
                 <!-- Conteneur cartes d'activités -->
-                <div id="contener_activity_cards">
-                    <article id="activity1">
-                        <button type="button" formtarget="_blank">
-                            <div>
+                <div id="container_activity_cards">
+                    <article class="activity_cards">
+                        <button type="button" class="button_activity" formtarget="_blank">
+                            <figure class="img_activity_portrait">
                                 <img src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
-                            </div>
-                            <div class="txt_activity">
-                                <h3>Vieux Port</h3>                         
-                            </div>
+                            </figure>
+                            <h3>Vieux Port</h3>
                         </button>
-                    </article>                         
-                    <div class="landscape_cards">
-                        <article id="activity2">
-                            <button type="button" formtarget="_blank">
-                                <div>
-                                    <img src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
-                                </div>
-                                <div class="txt_activity">
-                                    <h3>Fort de Pomègues</h3>                         
-                                </div>
-                            </button>
-                        </article>                
-                        <article id="activity3">
-                            <button type="button" formtarget="_blank">
-                                <div>
-                                    <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
-                                </div>
-                                <div class="txt_activity">
-                                    <h3>Iles du Frioul</h3>                         
-                                </div>
-                            </button>                            
-                        </article>
-                    </div>
-                    <article id="activity4">
-                        <button type="button" formtarget="_blank">
-                            <div>
-                                <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
-                            </div>
-                            <div class="txt_activity">
-                                <h3>Parc National des Calanques</h3>                         
-                            </div>
+                    </article>
+                    <article class="activity_cards">
+                        <button type="button" class="button_activity" formtarget="_blank">
+                            <figure class="img_activity_landscape">
+                                <img src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
+                            </figure>
+                            <h3>Fort de Pomègues</h3>
                         </button>
                     </article>                
-                    <div class="landscape_cards">
-                        <article id="activity5">
-                            <button type="button" formtarget="_blank">
-                                <div>
-                                    <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
-                                </div>
-                                <div class="txt_activity">
-                                    <h3>Notre-Dame-de-la-Garde</h3>                         
-                                </div>
-                            </button>
-                        </article>
-                        <article id="activity6">
-                            <button type="button" formtarget="_blank">
-                                <div>
-                                    <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
-                                </div>
-                                <div class="txt_activity">
-                                    <h3>Parc Longchamps</h3>                         
-                                </div>
-                            </button>                            
-                        </article>
-                    </div>                
+                    <article class="activity_cards">
+                        <button type="button" class="button_activity" formtarget="_blank">
+                            <figure class="img_activity_landscape">
+                                <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
+                            </figure>
+                            <h3>Iles du Frioul</h3>
+                        </button>                            
+                    </article>
+                    </div>
+                    <article class="activity_cards">
+                        <button type="button" class="button_activity" formtarget="_blank">
+                            <figure class="img_activity_portrait">
+                                <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
+                            </figure>
+                            <h3>Parc National des Calanques</h3> 
+                        </button>
+                    </article>                
+                    <article class="activity_cards">
+                        <button type="button" class="button_activity" formtarget="_blank">
+                            <figure class="img_activity_landscape">
+                                <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
+                            </figure>
+                            <h3>Notre-Dame-de-la-Garde</h3>
+                        </button>
+                    </article>
+                    <article class="activity_cards">
+                        <button type="button" class="button_activity" formtarget="_blank">
+                            <figure class="img_activity_landscape">
+                                <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
+                            </figure>
+                            <h3>Parc Longchamps</h3>
+                        </button>                            
+                    </article>           
                 </div>
             </section>
+
+            
 
             <!-- Footer -->
             <footer>
