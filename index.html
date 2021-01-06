@@ -25,10 +25,10 @@
           <!-- Menu de navigation -->
           <nav>
             <ul>
-              <li><a href="#hebergements">Hébergements</a></li>
-              <li><a href="#activites">Activités</a></li>
-              <li><a href="#" class="bold" id="sinscrire">S'inscrire</a></li>
+              <li><a href="#hebergements" id="heb">Hébergements</a></li>
+              <li><a href="#activites" id="act">Activités</a></li>
             </ul>
+            <a href="#" class="bold" id="sinscrire">S'inscrire</a>            
           </nav>
         </div>
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -39,7 +39,7 @@
       <section id="section1">
 
         <!-- Formulaire de recherche -->
-        <form method="GET" action="" id="recherche">
+        <form method="GET" action="#" id="recherche">
           <div id="icon1">
             <label for="ville"><i class="fas fa-map-marker-alt bold black"></i></label>
           </div>
@@ -55,25 +55,27 @@
         <!-- Filtres -->                
         <div id="bloc_filters">
           <p class="bold">Filtres</p>                    
-          <div class="filters">
-            <label for="economic"><i class="fas fa-money-bill-wave bold blue"></i></label>
-            <input id="economic" name="economic" type="button" />
-            <span class="info">Économique</span>
-          </div>
-          <div class="filters">
-            <label for="familial"><i class="fas fa-child bold blue"></i></label>
-            <input id="familial" name="familial" type="button" />
-            <span class="info">Familial</span>
-          </div>
-          <div class="filters">
-            <label for="love"><i class="fas fa-heart bold blue"></i></label>
-            <input id="love" name="love" type="button" />
-            <span class="info">Romantique</span>
-          </div>
-          <div class="filters">
-            <label for="pets"><i class="fas fa-dog blod blue"></i></label>
-            <input id="pets" name="pets" type="button" />
-            <span class="info">Animaux autorisés</span>
+          <div id="fourfilters">
+            <div class="filters">
+              <label for="economic"><i class="fas fa-money-bill-wave bold blue"></i></label>
+              <input id="economic" name="economic" type="button" />
+              <span class="info">Économique</span>
+            </div>
+            <div class="filters">
+              <label for="familial"><i class="fas fa-child bold blue"></i></label>
+              <input id="familial" name="familial" type="button" />
+              <span class="info">Familial</span>
+            </div>
+            <div class="filters">
+              <label for="love"><i class="fas fa-heart bold blue"></i></label>
+              <input id="love" name="love" type="button" />
+              <span class="info">Romantique</span>
+            </div>
+            <div class="filters">
+              <label for="pets"><i class="fas fa-dog blod blue"></i></label>
+              <input id="pets" name="pets" type="button" />
+              <span class="info">Animaux autorisés</span>
+            </div>
           </div>                    
         </div>                
 
@@ -278,8 +280,8 @@
         <!-- Conteneur cartes d'activités -->
         <div id="container_activity_cards">
           <a href="#" class="activity_cards">
-            <article class="activity">
-              <figure class="img_activity_portrait">
+            <article>
+              <figure>
                 <img src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
               </figure>
               <h3>Vieux Port</h3>
@@ -287,16 +289,16 @@
           </a>
           <div class="landscape">
             <a href="#" class="activity_cards">
-              <article class="activity">
-                <figure class="img_activity_landscape">
+              <article>
+                <figure>
                   <img src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
                 </figure>
                 <h3>Fort de Pomègues</h3>
               </article>
             </a>                
             <a href="#" class="activity_cards">
-              <article class="activity">
-                <figure class="img_activity_landscape">
+              <article>
+                <figure>
                   <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
                 </figure>
                 <h3>Iles du Frioul</h3>
@@ -304,8 +306,8 @@
             </a>
           </div>
           <a href="#" class="activity_cards">
-            <article class="activity">
-              <figure class="img_activity_portrait">
+            <article>
+              <figure>
                 <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
               </figure>
               <h3>Parc National des Calanques</h3> 
@@ -313,16 +315,16 @@
           </a> 
           <div class="landscape">              
             <a href="#" class="activity_cards">
-              <article class="activity">
-                <figure class="img_activity_landscape">
+              <article>
+                <figure>
                   <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
                 </figure>
                 <h3>Notre-Dame-de-la-Garde</h3>
               </article>
             </a>
             <a href="#" class="activity_cards">
-              <article class="activity">
-                <figure class="img_activity_landscape">
+              <article>
+                <figure>
                   <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
                 </figure>
                 <h3>Parc Longchamps</h3>
