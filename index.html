@@ -18,6 +18,7 @@
 
   <body>
     <div id="bloc_page">
+
       <!-- Header -->
       <header>
         <div id="logo_nav">
@@ -40,16 +41,12 @@
 
         <!-- Formulaire de recherche -->
         <form method="GET" action="#" id="recherche">
-          <div id="icon1">
-            <label for="ville"><i class="fas fa-map-marker-alt bold black"></i></label>
-          </div>
-          <div id="champ">
-            <input type="search" name="ville" id="ville" class="bold" minlength="3" maxlength="25" size="25" 
+          <label for="ville"><i class="fas fa-map-marker-alt bold black"></i></label>
+          <input type="search" name="ville" id="ville" class="bold" minlength="3" maxlength="25"
             value="Marseille, France" placeholder="Marseille, France" autofocus required />
-          </div>
-          <div>
-            <input type="submit" name="bouton-rechercher" id="bouton-rechercher" class="bold" value="Rechercher" />
-          </div>
+          <button type="submit" name="bouton-rechercher" id="bouton-rechercher">
+            <span class="motrechercher bold">Rechercher</span><span class="iconrechercher"!><i class="fas fa-search"></i></span>
+          </button>
         </form>                
 
         <!-- Filtres -->                
@@ -86,10 +83,11 @@
         </div>                
       </section>
 
-      <!-- Bloc principal : main + aside -->
-      <div id="bloc_principal">
-        <!-- Main : Hébergements à Marseille-->
-        <main id="hebergements">                    
+      <!-- main : section 2 + aside -->
+      <main id="hebergements">
+
+        <!-- Section 2 : Hébergements à Marseille-->
+        <section id="section2">                    
           <h2>Hébergements à Marseille</h2>
           <!-- Conteneur cartes hébergement -->
           <div id="container_accomodation_cards">                    
@@ -203,7 +201,7 @@
             </a>
           </div>
           <p class="bold" id="afficherplus"><a href="#">Afficher plus</a></p>
-        </main>
+        </section>
 
         <!-- Aside : Les plus populaires -->
         <aside id="aside">
@@ -211,7 +209,7 @@
           <!-- Conteneur cartes populaires-->
           <div id="container_popular_cards">
             <a href="#" class="popular_cards">
-              <article class="popular">
+              <article class="card2">
                 <figure class="img_popular">
                   <img src="assets/img/hotel_le_soleil_du_matin266x286.jpg" alt="Photo Hôtel Le soleil du matin"/>
                 </figure>
@@ -231,7 +229,7 @@
               </article>
             </a>
             <a href="#" class="popular_cards">
-              <article class="popular">
+              <article class="card2">
                 <figure class="img_popular">
                   <img src="assets/img/au_coeur_de_leau_chambres_dhotes266x286.jpg" alt="Photo Au coeur de l'eau Chambres d'hôtes"/>
                 </figure>
@@ -251,7 +249,7 @@
               </article>
             </a>
             <a href="#" class="popular_cards">
-              <article class="popular">
+              <article class="card2">
                 <figure class="img_popular">
                   <img src="assets/img/hotel_tout_bleu_et_blanc266x286.jpg" alt="Photo Hôtel Tout bleu et Blanc"/>
                 </figure>
@@ -272,16 +270,16 @@
             </a>
           </div>
         </aside>
-      </div>
+      </main>
 
-      <!-- Section 2 : Activités -->
+      <!-- Section 3 : Activités -->
       <section id="activites">
         <h2>Activités à Marseille</h2>
         <!-- Conteneur cartes d'activités -->
         <div id="container_activity_cards">
           <a href="#" class="activity_cards">
-            <article>
-              <figure>
+            <article class="card3">
+              <figure class="img_activity">
                 <img src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
               </figure>
               <h3>Vieux Port</h3>
@@ -289,16 +287,16 @@
           </a>
           <div class="landscape">
             <a href="#" class="activity_cards">
-              <article>
-                <figure>
+              <article class="card3">
+                <figure class="img_activity">
                   <img src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
                 </figure>
                 <h3>Fort de Pomègues</h3>
               </article>
             </a>                
             <a href="#" class="activity_cards">
-              <article>
-                <figure>
+              <article class="card3">
+                <figure class="img_activity">
                   <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
                 </figure>
                 <h3>Iles du Frioul</h3>
@@ -306,8 +304,8 @@
             </a>
           </div>
           <a href="#" class="activity_cards">
-            <article>
-              <figure>
+            <article class="card3">
+              <figure class="img_activity">
                 <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
               </figure>
               <h3>Parc National des Calanques</h3> 
@@ -315,19 +313,19 @@
           </a> 
           <div class="landscape">              
             <a href="#" class="activity_cards">
-              <article>
-                <figure>
+              <article class="card3">
+                <figure class="img_activity">
                   <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
                 </figure>
                 <h3>Notre-Dame-de-la-Garde</h3>
               </article>
             </a>
             <a href="#" class="activity_cards">
-              <article>
-                <figure>
+              <article class="card3">
+                <figure class="img_activity">
                   <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
                 </figure>
-                <h3>Parc Longchamps</h3>
+                <h3>Parc Longchamp</h3>
               </article>
             </a>
           </div>            
