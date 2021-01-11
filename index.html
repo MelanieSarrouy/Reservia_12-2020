@@ -77,17 +77,17 @@
         </div>                
 
         <!-- Informations de résultat-->
-        <div id="informations">
+        <data value="500" id="informations">
           <span class="icone-info"><i class="fas fa-info blue"></i></span>
           <p>Plus de 500 logements sont disponibles dans cette ville</p>
-        </div>                
+        </data>                
       </section>
 
       <!-- main : section 2 + aside -->
       <main id="hebergements">
 
         <!-- Section 2 : Hébergements à Marseille-->
-        <section id="section2">                    
+        <section id="section2">
           <h2>Hébergements à Marseille</h2>
           <!-- Conteneur cartes hébergement -->
           <div id="container_accomodation_cards">                    
@@ -97,7 +97,7 @@
                   <img src="assets/img/auberge_la_cannebiere490x236.jpg" alt="Photo Auberge de la Cannebière">
                 </figure>
                 <div class="txt_hebergement">
-                  <h3>Auberge de la Cannebière</h3>
+                  <h3>Auberge la Cannebière</h3>
                   <p>Nuit à partir de <span class="bold">25€</span></p>
                   <p class="stars">
                     <i class="fas fa-star blue"></i>
@@ -279,52 +279,64 @@
         <div id="container_activity_cards">
           <a href="#" class="activity_cards">
             <article class="card3">
-              <figure class="img_activity">
+              <picture class="img_activity">
+                <source srcset="assets/img/vieux_port_s.jpg, assets/img/vieux_port602x783.jpg" 
+                        media="(max-width: 450px)" />
                 <img src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
-              </figure>
+              </picture>
               <h3>Vieux Port</h3>
             </article>
           </a>
           <div class="landscape">
             <a href="#" class="activity_cards">
               <article class="card3">
-                <figure class="img_activity">
-                  <img src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
-                </figure>
+                <picture class="img_activity">
+                  <source srcset="assets/img/fort_de_pomegues_s.jpg, assets/img/fort_de_pomegues602x358.jpg" 
+                          media="(max-width: 450px)" />
+                  <img src="assets/img/fort_de_pomegues602x358.jpg"alt="Photo Fort de Pomègues"/>
+                </picture>
                 <h3>Fort de Pomègues</h3>
               </article>
             </a>                
             <a href="#" class="activity_cards">
               <article class="card3">
-                <figure class="img_activity">
+                <picture class="img_activity">
+                  <source  srcset="assets/img/iles_du_frioul_s.jpg, assets/img/iles_du_frioul602x216.jpg" 
+                          media="(max-width: 450px)" />
                   <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
-                </figure>
+                </picture>
                 <h3>Iles du Frioul</h3>
               </article>
             </a>
           </div>
           <a href="#" class="activity_cards">
             <article class="card3">
-              <figure class="img_activity">
+              <picture class="img_activity">
+                <source srcset="assets/img/parc_national_des_calanques_s.jpg, assets/img/parc_national_des_calanques602x783.jpg" 
+                        media="(max-width: 450px)" />
                 <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
-              </figure>
+              </picture>
               <h3>Parc National des Calanques</h3> 
             </article>
           </a> 
           <div class="landscape">              
             <a href="#" class="activity_cards">
               <article class="card3">
-                <figure class="img_activity">
+                <picture class="img_activity">
+                  <source srcset="assets/img/notre-dame-de-la-garde_s.jpg, assets/img/notre-dame-de-la-garde602x280.jpg" 
+                          media="(max-width: 450px)" />                 
                   <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
-                </figure>
+                </picture>
                 <h3>Notre-Dame-de-la-Garde</h3>
               </article>
             </a>
             <a href="#" class="activity_cards">
               <article class="card3">
-                <figure class="img_activity">
+                <picture class="img_activity">
+                  <source srcset="assets/img/parc_longchamp_s.jpg, assets/img/parc_longchamp602x306.jpg" 
+                      media="(max-width: 450px)" />            
                   <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
-                </figure>
+                </picture>
                 <h3>Parc Longchamp</h3>
               </article>
             </a>
