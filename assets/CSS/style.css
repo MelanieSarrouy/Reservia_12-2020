@@ -67,7 +67,7 @@ a {
 
 /* logo */
 #logo {
-  width: 6.5rem;
+  width: 6rem;
   margin-left: 0.5rem;
   padding-top: 2.2rem;
   position: absolute;
@@ -85,6 +85,7 @@ nav ul {
 }
 nav li {
   padding: 3.2rem 2.5rem;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -140,12 +141,13 @@ form label {
   font-size: 1.2rem;
 }
 #ville {
-  width: 16rem;
+  width: 13rem;
   border-top: #f2f2f2 0.1rem solid;
   border-bottom: #f2f2f2 0.1rem solid;
   border-right: none;
   border-left: none;
   padding-left: 1rem;
+  padding-right: 2rem;
   font-size: 1rem;
   font-family: raleway, 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
@@ -160,8 +162,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 input[type="search"] {
-/*-webkit-appearance: none;
-  -webkit-box-sizing: content-box; */
   outline: none;
 }
 #bouton-rechercher {
@@ -183,15 +183,16 @@ input[type="search"] {
   align-items: center;
   margin-bottom: 2rem;
 }
-#bloc_filters p {
-  font-size: 1rem;
+#bloc_filters h2 {
+  font-size: 1.1rem;
+  padding-right: 2rem;
 }
 #bloc_filters input {
   position: absolute;
   left: -9999px;
 }
 .filters {
-  margin-left: 2rem;
+  margin-right: 1.5rem;
   display: flex;
   align-items: center;
   border-top: solid #d9d9d9 0.15rem;
@@ -199,9 +200,9 @@ input[type="search"] {
   border-bottom: solid #d9d9d9 0.15rem;
   border-radius: 1.6rem;
   height: 2.8rem;
-  box-sizing: border-box;
   cursor: pointer;
   background-color: white;
+  box-sizing: border-box;
 }
 #fourfilters {
   display: flex;
@@ -213,7 +214,7 @@ input[type="search"] {
   background-color: #deebff;
   box-shadow: inset -0.25rem -0.25rem 0.5rem -0.2rem rgba(0, 0, 0, 0.4);
 }
-#bloc_filters i {
+#bloc_filters span {
   background-color: #deebff;
   width: 2.8rem;
   height: 2.8rem;
@@ -225,14 +226,16 @@ input[type="search"] {
   align-items: center;
 }
 .info {
-  padding: 0 1.2rem 0 0.8rem;
-  font-weight: bold;  
+  padding: 0 1.3rem 0 0.9rem;
+  font-weight: bold;
+  font-size: 1.1rem;  
 }
 /* Informations quantités logements */
 #informations {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  font-size: 1rem;
 }
 .icone-info {
   min-width: 1.6rem;
@@ -241,13 +244,11 @@ input[type="search"] {
   border-radius: 50%;
   display: flex;  
   box-sizing: border-box;
+  margin-right: 0.5rem;
 }
 .icone-info i {
   font-size: 0.8rem;
-  margin: auto;
-}
-#informations p {
-  padding-left: 0.8rem;
+  margin: auto;  
 }
 
 /* main : section2 + aside */
@@ -269,14 +270,9 @@ input[type="search"] {
   padding: 2rem 0rem;
 }
 #section2, #aside {
-  padding: 3rem 2.5rem;
+  padding: 3rem 2.5rem 2rem;
   background-color: #f2f2f2;
   border-radius: 1.5rem;
-}
-.card1 {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
 }
 .accomodations_cards {
   background-color: white;
@@ -296,9 +292,6 @@ input[type="search"] {
   display: flex;
 }
 .txt_hebergement {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 0.4rem 0.8rem 0.2rem;
   line-height: 1.5rem;    
   box-sizing: border-box;
@@ -309,7 +302,6 @@ input[type="search"] {
 }
 .stars { 
   display: flex;
-  padding-bottom: 0.2rem;
 }
 .fa-star {
   padding-right: 0.1rem;
@@ -339,7 +331,7 @@ aside h2 i {
 .popular_cards {
   background-color: white;
   overflow: hidden;
-  min-width: 300px;
+  min-width: 285px;
   border: solid 0.35rem white;
   border-radius: 1.5rem;
   padding: 0;
@@ -355,15 +347,17 @@ aside h2 i {
   width: 130px;
   min-width: 127px;
   display: flex;
-  align-items: center;
   box-sizing: border-box;
 }
 .txt_popular {
-  line-height: 1.5rem;
+  line-height: 2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.txt_popular h3 {
+  line-height: 1.2rem;
 }
 .txt_popular i {
   font-size: 0.75rem;   
@@ -390,7 +384,7 @@ aside h2 i {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-#activites article h3 {
+.activity_cards h3{
   text-align: left;
   padding: 1rem 1rem;
 }
@@ -435,6 +429,11 @@ footer a {
     padding-right: 9%;
     padding-left: 9%;
   }
+  nav li:active {
+    color: #0065fc;
+    padding-top: 3rem;
+    border-top: 0.2rem solid #0065fc;
+  }
   #sinscrire {
   padding-top: 3.2rem;
   padding-right: 1rem;
@@ -448,14 +447,22 @@ footer a {
     align-items: flex-start;
     margin-bottom: 0;
   }
-  #bloc_filters p {
-    font-size: 1rem;
+  .info {
+    padding: 0 1rem 0 0.8rem;
+    font-size: 0.9rem;
   }
   .filters {
     margin-left: 0;
     margin-bottom: 0.8rem;
     margin-right: 0.8rem;
     box-sizing: border-box;   
+  }
+  .filters:active {
+    border-right: solid white 0.15rem;
+    border-top: none;
+    border-bottom: none;
+    background-color: #deebff;
+    box-shadow: inset -0.25rem -0.25rem 0.5rem -0.2rem rgba(0, 0, 0, 0.4);
   }
   #fourfilters {
     flex-wrap: wrap;
@@ -466,6 +473,9 @@ footer a {
   .accomodations_cards:active, .popular_cards:active, .activity_cards:active {
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     }
+  #section2, #aside {
+    padding: 3rem 2.5rem;
+  }
   #hebergements {
     display: flex;
     flex-direction: column-reverse;
@@ -494,7 +504,7 @@ footer a {
 }
 
   /* Règles CSS pour écrans smartphones */
-@media all and (max-width:480px) {
+@media all and (max-width:510px) {
     /* general */
   #bloc_page {
     margin: 0;
@@ -505,7 +515,6 @@ footer a {
     /* Header */ 
   #logo {
     margin-left: 1.2rem;
-    width: 6rem;
   }
     /* nav */
   #sinscrire {
@@ -527,15 +536,21 @@ footer a {
   nav li {
     padding-top: 0;
     padding-bottom: 1rem;
+    padding-top: 0rem;
     text-align: center;
-  }
-  nav li:nth-child(1) {
-    border-bottom: 0.2rem solid #0065fc;
-    color: #0065fc
-  }
-  nav li:nth-child(2) {
     border-bottom: 0.2rem solid #f2f2f2;
   }
+  nav li:active {
+    color: #0065fc;
+    padding-top: 0;
+    border-bottom: 0.2rem solid #0065fc;
+    border-top: none;
+  }
+  nav li:hover {
+    padding-top: 0;
+    border-top: none;
+    border-bottom: 0.2rem solid #0065fc;
+  } 
       /* Titre */
   h1 + p {
     margin-left: 1.2rem;
@@ -552,15 +567,21 @@ footer a {
     margin-left: 1.2rem;
     margin-right: 1.2rem;
   }
+  #recherche {
+    display: grid;
+    grid-template-columns: 3rem auto;
+  }
   #ville {
     position: relative;
-    width: 17rem;
+    border-radius: 0 1rem 1rem 0;
+    border-right: #f2f2f2 0.1rem solid;    
+    width: auto;
   }
   #bouton-rechercher {
     border-radius: 1rem;
-    max-width: 3rem;
+    width: 3rem;
     position: absolute;
-    left: 19rem;
+    right: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -571,18 +592,15 @@ footer a {
   .motrechercher {
     display: none;
   }
-  .filters > [type=button]:active{
-    border-right: solid white 0.15rem;
-    border-top: none;
-    border-bottom: none;
-    background-color: #deebff;
-    box-shadow: inset -0.25rem -0.25rem 0.5rem -0.2rem rgba(0, 0, 0, 0.4);
-  }
-  #bloc_filters span {
+  #bloc_filters label {
     font-size: 0.9rem;
   }
   .icone-info {
     align-self: start;
+  }
+  #fourfilters label {
+    font-size: 1rem;
+    padding-right: 1.1rem;
   }
   #informations p {
     font-size: 0.9rem;
@@ -659,5 +677,4 @@ footer a {
   .column_footer {
     margin-bottom: 2rem;    
   }
-
 }

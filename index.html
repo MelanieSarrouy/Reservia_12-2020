@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-FR">
   <head>
     <!-- Informations pour le navigateur -->
     <meta charset="UTF-8" />
@@ -21,17 +21,15 @@
 
       <!-- Header -->
       <header>
-        <div id="logo_nav">
-          <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" id="logo" />
-          <!-- Menu de navigation -->
-          <nav>
-            <ul>
-              <li><a href="#hebergements" id="heb">Hébergements</a></li>
-              <li><a href="#activites" id="act">Activités</a></li>
-            </ul>
-            <a href="#" class="bold" id="sinscrire">S'inscrire</a>            
-          </nav>
-        </div>
+        <img src="assets/img/Reservia@3x.png" alt="Logo de Reservia" id="logo" />
+        <!-- Menu de navigation -->
+        <nav>
+          <ul>
+            <li><a href="#hebergements" id="heb">Hébergements</a></li>
+            <li><a href="#activites" id="act">Activités</a></li>
+          </ul>
+          <a href="#" class="bold" id="sinscrire">S'inscrire</a>            
+        </nav>        
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>                        
       </header> 
@@ -45,42 +43,40 @@
           <input type="search" name="ville" id="ville" class="bold" minlength="3" maxlength="25"
             value="Marseille, France" placeholder="Marseille, France" autofocus required />
           <button type="submit" name="bouton-rechercher" id="bouton-rechercher">
-            <span class="motrechercher bold">Rechercher</span><span class="iconrechercher"!><i class="fas fa-search"></i></span>
+            <span class="motrechercher bold">Rechercher</span><span class="iconrechercher"><i class="fas fa-search"></i></span>
           </button>
         </form>                
 
         <!-- Filtres -->                
         <div id="bloc_filters">
-          <p class="bold">Filtres</p>                    
+          <h2 class="bold">Filtres</h2>                    
           <div id="fourfilters">
-            <div class="filters">
-              <label for="economic"><i class="fas fa-money-bill-wave bold blue"></i></label>
-              <input id="economic" name="economic" type="button" />
-              <span class="info">Économique</span>
-            </div>
-            <div class="filters">
-              <label for="familial"><i class="fas fa-child bold blue"></i></label>
-              <input id="familial" name="familial" type="button" />
-              <span class="info">Familial</span>
-            </div>
-            <div class="filters">
-              <label for="love"><i class="fas fa-heart bold blue"></i></label>
-              <input id="love" name="love" type="button" />
-              <span class="info">Romantique</span>
-            </div>
-            <div class="filters">
-              <label for="pets"><i class="fas fa-dog blod blue"></i></label>
-              <input id="pets" name="pets" type="button" />
-              <span class="info">Animaux autorisés</span>
-            </div>
+            <p class="filters">
+              <span><i class="fas fa-money-bill-wave bold blue"></i></span>
+              <label class="info" for="economic">Économique</label>
+              <input type="checkbox" class="filter" id="economic" name="economic" value="economic" />
+            </p>
+            <p class="filters">
+              <span><i class="fas fa-child bold blue"></i></span>
+              <label class="info" for="familial">Familial</label>
+              <input type="checkbox" class="filter" id="familial" name="familial" value="familial" />
+            </p>
+            <p class="filters">
+              <span><i class="fas fa-heart bold blue"></i></span>
+              <label class="info" for="love">Romantique</label>
+              <input type="checkbox" class="filter" id="love" name="love" value="love" />
+            </p>
+            <p class="filters">
+              <span><i class="fas fa-dog blod blue"></i></span>
+              <label class="info" for="pets">Animaux autorisés</label>
+              <input type="checkbox" class="filter" id="pets" name="pets" value="pets" />
+            </p>
           </div>                    
         </div>                
 
         <!-- Informations de résultat-->
-        <data value="500" id="informations">
-          <span class="icone-info"><i class="fas fa-info blue"></i></span>
-          <p>Plus de 500 logements sont disponibles dans cette ville</p>
-        </data>                
+        <p id="informations"><span class="icone-info"><i class="fas fa-info blue"></i></span>Plus de 500 logements sont disponibles dans cette ville</p>
+                        
       </section>
 
       <!-- main : section 2 + aside -->
@@ -92,7 +88,7 @@
           <!-- Conteneur cartes hébergement -->
           <div id="container_accomodation_cards">                    
             <a href="#" class="accomodations_cards">
-              <article class="card1">
+              <article>
                 <figure class="img_hebergement">
                   <img src="assets/img/auberge_la_cannebiere490x236.jpg" alt="Photo Auberge de la Cannebière">
                 </figure>
@@ -110,7 +106,7 @@
               </article>
             </a>
             <a href="#" class="accomodations_cards">                       
-              <article class="card1">
+              <article>
                 <figure class="img_hebergement">
                   <img src="assets/img/hotel_du_port490x236.jpg" alt="Photo Hôtel du port"/>
                 </figure>
@@ -128,7 +124,7 @@
               </article>
             </a> 
             <a href="#" class="accomodations_cards">
-              <article class="card1">
+              <article>
                 <figure class="img_hebergement">
                   <img src="assets/img/hotel_les_mouettes490x236.jpg" alt="Photo Hôtel Les mouettes"/>
                 </figure>
@@ -146,7 +142,7 @@
               </article>
             </a>
             <a href="#" class="accomodations_cards">
-              <article class="card1">
+              <article>
                 <figure class="img_hebergement">
                   <img src="assets/img/hotel_de_le_mer490x236.jpg" alt="Photo Hôtel de la mer"/>
                 </figure>
@@ -164,7 +160,7 @@
               </article>
             </a>
             <a href="#" class="accomodations_cards">
-              <article class="card1">
+              <article>
                 <figure class="img_hebergement">
                   <img src="assets/img/auberge_le_panier490x236.jpg" alt="Photo Auberge Le Panier"/>
                 </figure>
@@ -182,7 +178,7 @@
               </article>
             </a>
             <a href="#" class="accomodations_cards">
-              <article class="card1">
+              <article>
                 <figure class="img_hebergement">
                   <img src="assets/img/hotel_chez_amina490x236.jpg" alt="Photo Hôtel chez Amina"/>
                 </figure>
@@ -279,65 +275,65 @@
         <div id="container_activity_cards">
           <a href="#" class="activity_cards">
             <article class="card3">
-              <picture class="img_activity">
-                <source srcset="assets/img/vieux_port_s.jpg, assets/img/vieux_port602x783.jpg" 
-                        media="(max-width: 450px)" />
-                <img src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
-              </picture>
-              <h3>Vieux Port</h3>
+              <figure class="img_activity">
+                <img  srcset="assets/img/vieux_port_s.jpg 450w, assets/img/vieux_port602x783.jpg 800w" 
+                      sizes="(max-width: 450px) 100px, (max-width:1024px) 1200px"
+                      src="assets/img/vieux_port602x783.jpg" alt="Photo Vieux Port"/>
+              </figure>
+              <h3 class="bold">Vieux Port</h3>
             </article>
           </a>
           <div class="landscape">
             <a href="#" class="activity_cards">
               <article class="card3">
-                <picture class="img_activity">
-                  <source srcset="assets/img/fort_de_pomegues_s.jpg, assets/img/fort_de_pomegues602x358.jpg" 
-                          media="(max-width: 450px)" />
-                  <img src="assets/img/fort_de_pomegues602x358.jpg"alt="Photo Fort de Pomègues"/>
-                </picture>
-                <h3>Fort de Pomègues</h3>
+                <figure class="img_activity">
+                  <img  srcset="assets/img/fort_de_pomegues_s.jpg 450w, assets/img/fort_de_pomegues602x358.jpg 800w" 
+                        sizes="(max-width: 450px) 100px, (max-width:1024px) 1200px"
+                        src="assets/img/fort_de_pomegues602x358.jpg" alt="Photo Fort de Pomègues"/>
+                </figure>
+                <h3 class="bold">Fort de Pomègues</h3>
               </article>
             </a>                
             <a href="#" class="activity_cards">
               <article class="card3">
-                <picture class="img_activity">
-                  <source  srcset="assets/img/iles_du_frioul_s.jpg, assets/img/iles_du_frioul602x216.jpg" 
-                          media="(max-width: 450px)" />
-                  <img src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul"/>
-                </picture>
-                <h3>Iles du Frioul</h3>
+                <figure class="img_activity">
+                  <img  srcset="assets/img/iles_du_frioul_s.jpg 450w, assets/img/iles_du_frioul602x216.jpg 800w" 
+                        sizes="(max-width: 450px) 100px, (max-width:1024px) 1200px"
+                        src="assets/img/iles_du_frioul602x216.jpg" alt="Photo Iles du Frioul" />
+                </figure>
+                <h3 class="bold">Iles du Frioul</h3>
               </article>
             </a>
           </div>
           <a href="#" class="activity_cards">
             <article class="card3">
-              <picture class="img_activity">
-                <source srcset="assets/img/parc_national_des_calanques_s.jpg, assets/img/parc_national_des_calanques602x783.jpg" 
-                        media="(max-width: 450px)" />
-                <img src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
-              </picture>
-              <h3>Parc National des Calanques</h3> 
+              <figure class="img_activity">
+                <img  srcset="assets/img/parc_national_des_calanques_s.jpg 450w, assets/img/parc_national_des_calanques602x783.jpg 800w" 
+                      sizes="(max-width: 450px) 100px, (max-width:1024px) 1200px"
+                      src="assets/img/parc_national_des_calanques602x783.jpg" alt="Photo Parc National des Calanques"/>
+              </figure>
+              <h3 class="bold">Parc National des Calanques</h3>
             </article>
           </a> 
           <div class="landscape">              
             <a href="#" class="activity_cards">
               <article class="card3">
-                <picture class="img_activity">
-                  <source srcset="assets/img/notre-dame-de-la-garde_s.jpg, assets/img/notre-dame-de-la-garde602x280.jpg" 
-                          media="(max-width: 450px)" />                 
-                  <img src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
-                </picture>
-                <h3>Notre-Dame-de-la-Garde</h3>
+                <figure class="img_activity">
+                  <img  srcset="assets/img/notre-dame-de-la-garde_s.jpg 450w, assets/img/notre-dame-de-la-garde602x280.jpg 800w" 
+                        sizes="(max-width: 450px) 100px, (max-width:1024px) 1200px"              
+                        src="assets/img/notre-dame-de-la-garde602x280.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
+                </figure>
+                <h3 class="bold">Notre-Dame-de-la-Garde</h3>
               </article>
             </a>
             <a href="#" class="activity_cards">
               <article class="card3">
-                <picture class="img_activity">
-                  <source srcset="assets/img/parc_longchamp_s.jpg, assets/img/parc_longchamp602x306.jpg" 
-                      media="(max-width: 450px)" />            
-                  <img src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
-                </picture>
-                <h3>Parc Longchamp</h3>
+                <figure class="img_activity">
+                  <img  srcset="assets/img/parc_longchamp_s.jpg 450w, assets/img/parc_longchamp602x306.jpg 800w" 
+                        sizes="(max-width: 450px) 100px, (max-width:1024px) 1200px"            
+                        src="assets/img/parc_longchamp602x306.jpg" alt="Photo Parc Longchamp"/>
+                </figure>
+                <h3 class="bold">Parc Longchamp</h3>
               </article>
             </a>
           </div>            
