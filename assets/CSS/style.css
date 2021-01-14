@@ -254,7 +254,7 @@ input[type="search"] {
 
 /* main : section2 + aside */
 
-#hebergements {
+main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 3%;
@@ -359,6 +359,10 @@ aside h2 i {
 }
 .txt_popular h3 {
   line-height: 1.2rem;
+  padding-bottom: 0.3rem;
+}
+.txt_popular p {
+  line-height: 1.2rem;
 }
 .txt_popular i {
   font-size: 0.75rem;   
@@ -403,15 +407,12 @@ aside h2 i {
 
 footer {
   background-color: #f2f2f2;
-}
-#footer {
   display: flex;
-  padding: 3rem 3.5% 3.5rem;
+  justify-content: space-between;
+  padding: 3rem 25% 3.5rem 3.5%;
 }
 .column_footer {
   line-height: 2rem;
-  margin-right: 15%;
-  width: 20rem;
 }
 .column_footer h3 {
   font-size: 1.1rem;
@@ -478,7 +479,7 @@ footer a {
   #section2, #aside {
     padding: 3rem 2.5rem;
   }
-  #hebergements {
+  main {
     display: flex;
     flex-direction: column-reverse;
   } 
@@ -502,7 +503,14 @@ footer a {
     grid-template-columns: repeat(2,1fr);
     grid-auto-flow: row;
     row-gap: 2rem;
-  }    
+  } 
+    /* Footer */
+  footer {
+    padding: 3rem 3.5% 3.5rem 3.5%;
+  }
+  .column_footer {
+    padding-right: 1rem;
+  }   
 }
 
   /* Règles CSS pour écrans smartphones */
@@ -671,12 +679,37 @@ footer a {
     padding: 1.2rem 1rem;
   }
     /* Footer */
-  #footer {
+  footer {
     flex-direction: column;
     padding: 2rem 1.2rem;
     margin-top: 1rem;
   }
   .column_footer {
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem; 
+    padding-right: 0rem;
+  }
+}
+
+/* Règles CSS pour écrans inférieurs à 320px */
+@media all and (max-width:320px) {
+  #ville {
+    padding-right: 0rem;
+    font-size: 0.9rem;
+  }
+  .popular_cards {
+    min-width: auto;
+  }
+  h3 {
+    font-size: 0.9rem;
+  }
+  .txt_popular {
+    padding-bottom: 0rem;
+  }
+  .txt_popular h3 {
+    line-height: 1rem;
+  }
+  .txt_popular p {
+    font-size: 0.8rem;
+    padding-top: 0rem;
   }
 }
