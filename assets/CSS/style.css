@@ -76,7 +76,6 @@ a {
 nav {
   display: flex;
   justify-content: flex-end;
-  margin-left: auto;
 }
 nav ul {
   display: flex;
@@ -186,6 +185,8 @@ input[type="search"] {
 #bloc_filters h2 {
   font-size: 1.1rem;
   padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 #bloc_filters input {
   position: absolute;
@@ -447,14 +448,16 @@ footer a {
     align-items: flex-start;
     margin-bottom: 0;
   }
+  #bloc_filters h2 {
+    padding-top: 0;
+  }
   .info {
     padding: 0 1rem 0 0.8rem;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   .filters {
     margin-left: 0;
     margin-bottom: 0.8rem;
-    margin-right: 0.8rem;
     box-sizing: border-box;   
   }
   .filters:active {
@@ -466,7 +469,6 @@ footer a {
   }
   #fourfilters {
     flex-wrap: wrap;
-    padding-top: 1rem;
     padding-bottom: 1rem;
   }  
     /* Main */
@@ -592,18 +594,18 @@ footer a {
   .motrechercher {
     display: none;
   }
-  #bloc_filters label {
-    font-size: 0.9rem;
+  .filters {
+    margin-right: 0.8rem;
+  }
+  .info {
+    font-size: 1rem;
+    padding-right: 0.8rem;
   }
   .icone-info {
     align-self: start;
   }
-  #fourfilters label {
+  #informations {
     font-size: 1rem;
-    padding-right: 1.1rem;
-  }
-  #informations p {
-    font-size: 0.9rem;
     line-height: 1.2rem;
     padding-top: 0.2rem;
   }
